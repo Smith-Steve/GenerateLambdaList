@@ -18,14 +18,18 @@ public class GenerateLambdaList
         var listOfLambdas = new List<FunctionConfiguration>();
 
         var functionPaginator = lambdaClient.Paginators.ListFunctions(new ListFunctionsRequest());
-        int numberCount = 1;
+
         await foreach(var function in functionPaginator.Functions)
         {
-            var response = lambdaClient.GetFunctionAsync(new GetFunctionRequest
+
+            var functionRequest = new GetFunctionRequest
             {
                 FunctionName = function.FunctionName
-            });
-            // Console.WriteLine($"Function Name: {function.FunctionName}. Function Name Data Type: {function.FunctionName.GetType()}");
+            };
+
+            var response = await lambdaClient.GetFunctionAsync(functionRequest);
+            Console.WriteLine(response);
+
             // Console.WriteLine($"Function Description: {function.Description}. Function Description Data Type: {function.FunctionName.GetType()}");
             // Console.WriteLine($"Function AWSARN:{function.FunctionArn}. Function ARN Data Type: {function.FunctionArn.GetType()}");
             // Console.WriteLine($"Function Handler:{function.Handler}. Function Handler Data Type: {function.Handler.GetType()}");
@@ -33,7 +37,6 @@ public class GenerateLambdaList
             // Console.WriteLine($"Function Last Modified On: {function.LastModified}. Function Last Modified Data Type: {function.LastModified.GetType()}");
             // Console.WriteLine($"Function Layers: {function.Layers}. Function Layers DataType: {function.LastModified.GetType()}");
             // Console.WriteLine($"Function Role: {function.Role}. Function Role Data Type: {function.Role.GetType()}");
-            Console.WriteLine(response);
             listOfLambdas.Add(function);
         }
         return listOfLambdas;
