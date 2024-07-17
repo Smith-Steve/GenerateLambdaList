@@ -17,10 +17,19 @@ public class GenerateLambdaList
         var listOfLambdas = new List<FunctionConfiguration>();
 
         var functionPaginator = lambdaClient.Paginators.ListFunctions(new ListFunctionsRequest());
-        
+        int numberCount = 1;
         await foreach(var function in functionPaginator.Functions)
         {
-            Console.WriteLine($"Function Name: {function.FunctionName} - Function Runtime: {function.Runtime}");
+            numberCount++;
+            Console.WriteLine($"Function Name: {function.FunctionName}.");
+            Console.WriteLine($"Function Description: {function.Description}");
+            Console.WriteLine($"Function AWSARN:{function.FunctionArn}");
+            Console.WriteLine($"Function Handler:{function.Handler}");
+            Console.WriteLine($"Function Runtime: {function.Runtime}");
+            Console.WriteLine($"Function Last Modified On: {function.LastModified}");
+            Console.WriteLine($"Function Layers: {function.Layers}");
+            Console.WriteLine($"Function Role: {function.Role}");
+            Console.WriteLine(numberCount);
             listOfLambdas.Add(function);
         }
         Console.WriteLine(listOfLambdas.Count);
