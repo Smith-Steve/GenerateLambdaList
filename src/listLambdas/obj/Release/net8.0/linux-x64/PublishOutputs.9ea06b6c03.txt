@@ -1,0 +1,8 @@
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\listLambdas.deps.json
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\listLambdas.runtimeconfig.json
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\listLambdas.pdb
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\Amazon.Lambda.Core.dll
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\AWSSDK.Core.dll
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\AWSSDK.Lambda.dll
+C:\Users\steve.m.smith\repos\csharp_lambdas\listLambdas\src\listLambdas\bin\Release\net8.0\publish\listLambdas.dll

@@ -23,6 +23,7 @@ public class GenerateLambdaList
             Console.WriteLine($"Function Name: {function.FunctionName} - Function Runtime: {function.Runtime}");
             listOfLambdas.Add(function);
         }
+        Console.WriteLine(listOfLambdas.Count);
         return listOfLambdas;
     }
 }
