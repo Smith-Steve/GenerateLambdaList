@@ -14,5 +14,7 @@
     <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.4.1" />
     <PackageReference Include="AWSSDK.lambda" Version="3.7.305.50" />
+    <PackageReference Include="EPPlus" Version="7.2.1" />
+    <PackageReference Include="NPOI" Version="2.7.1" />
   </ItemGroup>
 </Project>
