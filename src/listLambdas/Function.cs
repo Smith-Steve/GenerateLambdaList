@@ -19,16 +19,21 @@ public class GenerateLambdaList
 
         var functionPaginator = lambdaClient.Paginators.ListFunctions(new ListFunctionsRequest());
 
-
         await foreach(var function in functionPaginator.Functions)
         {
-            Console.WriteLine($"Function Description: {function.Description}. Function Description Data Type: {function.FunctionName.GetType()}");
-            Console.WriteLine($"Function AWSARN:{function.FunctionArn}. Function ARN Data Type: {function.FunctionArn.GetType()}");
-            Console.WriteLine($"Function Handler:{function.Handler}. Function Handler Data Type: {function.Handler.GetType()}");
-            Console.WriteLine($"Function Runtime: {function.Runtime}. Function Runtime Data Type: {function.Runtime.GetType()}");
-            Console.WriteLine($"Function Last Modified On: {function.LastModified}. Function Last Modified Data Type: {function.LastModified.GetType()}");
-            Console.WriteLine($"Function Layers: {function.Layers}. Function Layers DataType: {function.LastModified.GetType()}");
-            Console.WriteLine($"Function Role: {function.Role}. Function Role Data Type: {function.Role.GetType()}");
+            Console.WriteLine($"Function Name: {function.FunctionName}");
+            Console.WriteLine($"Function ARN: {function.FunctionArn}");
+            Console.WriteLine($"Function Description: {function.Description}");
+            Console.WriteLine($"Function Runtime: {function.Runtime}");
+            Console.WriteLine($"Function Last Execute: ");
+            Console.WriteLine($"Function Logging Enabled: {function.LoggingConfig.ApplicationLogLevel}");
+            Console.WriteLine($"Function Region: ");
+            Console.WriteLine($"Function Memory size: {function.MemorySize}");
+            Console.WriteLine($"Function Timeout: {function.Timeout}");
+            Console.WriteLine($"Function Environment Variables: {function.Environment.Variables}");
+            Console.WriteLine($"Function Hander: {function.Handler}");
+            Console.WriteLine($"Function StackName: ");
+            Console.WriteLine($"Function Triggers: ");
             listOfLambdas.Add(function);
         }
         return listOfLambdas;
