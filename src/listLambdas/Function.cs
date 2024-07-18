@@ -30,7 +30,7 @@ public class GenerateLambdaList
             Console.WriteLine($"Function Region: ");
             Console.WriteLine($"Function Memory size: {function.MemorySize}");
             Console.WriteLine($"Function Timeout: {function.Timeout}");
-            Console.WriteLine($"Function Environment Variables: {function.Environment.Variables}");
+            Console.WriteLine($"Function Environment Variables: ");
             Console.WriteLine($"Function Hander: {function.Handler}");
             Console.WriteLine($"Function StackName: ");
             Console.WriteLine($"Function Triggers: ");
